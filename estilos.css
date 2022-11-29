@@ -57,3 +57,22 @@ body {
     border: 1px solid #FFFFFF;
 }
 
+.custom-shape-divider-top-1669430750 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1669430750 svg {
+    position: relative;
+    display: block;
+    width: calc(132% + 1.3px);
+    height: 192px;
+}
+
+.custom-shape-divider-top-1669430750 .shape-fill {
+    fill: #FFFFFF;
+}
