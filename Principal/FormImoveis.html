@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../estilos.css">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <title>Cadastro Cliente</title>
+    <title>Cadastro Imóveis</title>
 </head>
 <header
     class=".bg-light.bg-gradient navbar text-bg-dark navbar navbar-expand-lg navbar-dark fixed-top py-3 border-bottom p-2 mb-2 border-opacity-50"
@@ -48,16 +48,20 @@
         <div class="bg-dark col-8 p-5 text-light align-text-bottom " style="height:250px ; width: 1000px;">
         </div>
     </div>
-    <div class="row align-items-center">
+    <div class=" row align-items-center">
         <div class="col-md-10  mx-auto col-lg-10">
             <div class="mb-3">
-                <h1 class="text-light">Formulário de cadastro de cliente</h1>
+                <h1 class="text-light">Formulário de cadastro de imóveis</h1>
             </div>
             <form class="form-control p-4 p-md-5 border rounded-3 bg-dark">
+                <!--Inicio cadastro proprietario-->
+                <div class="mb-3">
+                    <h3 class="text-light">Dados do proprietário</h3>
+                </div>
                 <div class="row align-items-center">
                     <div class="form-label mb-0 col-12">
                         <input type="nome" class="form-control" id="inputNome" placeholder="Nome">
-                        <label for="inputNome">Nome</label>
+                        <label for="inputNome">Nome do proprietário</label>
                     </div>
                     <div class="form-label mb-0 col-5">
                         <input type="cpf" class="form-control" id="inputCpf" placeholder="Cpf">
@@ -120,41 +124,118 @@
                             <option value="TO">Tocantins</option>
                         </datalist>
                     </div>
-                    <div class="form-label mb-4 col-12">
-                        <select class="form-select col-12 " aria-label="Default select example">
-                            <option selected>Selecione sua faixa de renda</option>
-                            <option value="1">Até R$2.500</option>
-                            <option value="2">R$2.501 até R$3.200</option>
-                            <option value="3">R$3.201 até R$4.250</option>
-                            <option value="3">R$4.251 até R$5.300</option>
-                            <option value="3">Acima de R$5.301 </option>
-                        </select>
-                    </div>
-
-                    <ul class="  mb-3 text-light ">
-                        <h3 class="text-light">Imóveis de interesse </h3>
-                        <li class="list-group-item">
-                            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                            REF: 001
-                        </li>
-                        <li class="list-group-item">
-                            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                            REF: 002
-                        </li>
-                        <li class="list-group-item">
-                            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                            REF: 003
-                        </li>
-                    </ul>
                     <div class="form-label mb-0">
                         <input type="email" class="form-control" id="inputEmail" placeholder="E-mail">
                         <label for="inputEmail">E-mail</label>
                     </div>
-                    <div class="form-label mb-0">
-                        <input type="password" class="form-control" id="inputPassword" placeholder="Senha">
-                        <label for="inputPassword">Senha</label>
+                    <!--Fim cadastro proprietario-->
+
+                    <!--Inicio cadastro imovel-->
+                    <div class="mb-3">
+                        <h3 class="text-light">Dados do imóvel</h3>
+                    </div>
+                    <div class="form-label mb-0 col-10">
+                        <input type="endereco" class="form-control" id="inputEndereco" placeholder="Endereco">
+                        <label for="inputEndereco">Endereço</label>
+                    </div>
+                    <div class="form-label mb-0 col-2">
+                        <input type="numero" class="form-control" id="inputNumero" placeholder="Número">
+                        <label for="inputNumero">Nº</label>
+                    </div>
+                    <div class="form-label mb-0 col-8">
+                        <input type="complemento" class="form-control" id="inputComplemento" placeholder="Complemento">
+                        <label for="inputEndereco">Complemento</label>
+                    </div>
+                    <div class="form-label mb-0 col-4">
+                        <input type="numeroIptu" class="form-control" id="inputNumeroIPTU" placeholder="Número IPTU">
+                        <label for="inputNumero">Nº IPTU</label>
+                    </div>
+                    <div class="form-label mb-0 col-5">
+                        <input type="cep" class="form-control" id="inputCep" placeholder="Cep">
+                        <label for="inputCep">CEP</label>
+                    </div>
+                    <div class="form-label mb-0 col-5">
+                        <input type="cidade" class="form-control" id="inputCidade" placeholder="Cidade">
+                        <label for="inputCidade">Cidade</label>
+                    </div>
+                    <div class="form-label mb-0 col-2">
+                        <input type="estado" class="form-control" list="Estado" id="inputEstado" placeholder="Estado">
+                        <label for="exampleDataList" class="form-label">Estado</label>
+                        <datalist id="Estado">
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </datalist>
+                    </div>
+                    <!--Radio tipo do imovel-->
+                    <div class=" text-light  align-items-center mb-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Casa
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                                checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Apartamento
+                            </label>
+                        </div>
+                    </div>
+                    <!--Fim Radio tipo do imovel-->
+                    <div class="form-label mb-0 col-4">
+                        <input type="Valor" class="form-control" id="inputValor"
+                            placeholder="Valor de Aluguel ou Venda">
+                        <label for="inputValor">Valor</label>
+                    </div>
+                    <div class="form-label mb-0 col-4">
+                        <input type="ValorIptu" class="form-control" id="inputValorIPTU" placeholder="Valor IPTU">
+                        <label for="inputValorIPTU">Valor do IPTU</label>
+                    </div>
+                    <div class="form-label mb-0 col-4 ">
+                        <input type="ValorCondominio" class="form-control" id="inputValorCondominio"
+                            placeholder="Valor Condominio">
+                        <label for="inputValorCondominio">Valor do Condominio</label>
+                    </div>
+                    <div class="form-label mb-0 col-6">
+                        <input type="AreaUtil" class="form-control" id="inputAreaUtil" placeholder="Área útil">
+                        <label for="inputAreaUtil">Area Util</label>
+                    </div>
+                    <div class="form-label mb-0 col-6">
+                        <input type="AreaTotal" class="form-control" id="inputAreaTotal" placeholder="Área total">
+                        <label for="inputAreaTotal">Area Total</label>
+                    </div>
+                    <div class="form-label  mb-4 text-light" style="margin-top: -0.75rem">
+                        <label for="formFileMultiple" class="form-label">Anexe aqui as fotos do imóvel</label>
+                        <input class="form-control" type="file" id="formFileMultiple" multiple>
                     </div>
 
+                    <!--Fim cadastro imovel-->
                     <button class="container-fluid btn btn-lg btn-info " type="submit">Enviar</button>
             </form>
         </div>
